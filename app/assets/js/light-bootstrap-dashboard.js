@@ -27,6 +27,7 @@ $(document).ready(function(){
 
     // check if there is an image set for the sidebar's background
     lbd.checkSidebarImage();
+    lbd.widgetBackground();
 
     // Init navigation toggle for small screens
     if(window_width <= 991){
@@ -75,6 +76,17 @@ lbd = {
             sidebar_container = '<div class="sidebar-background" style="background-image: url(' + image_src + ') "/>'
             $sidebar.append(sidebar_container);
         }
+    },
+    widgetBackground: function(){
+        $widget = $('.btc-update .header');
+        image_src = $widget.data('image');
+
+        if(image_src !== undefined){
+            sidebar_container = '<div class="widget-background" style="background-image: url(' + image_src + ') "/>'
+            $widget.append(sidebar_container);
+        }
+
+        console.log("Hello, I'm here...");
     },
     initRightMenu: function(){
          if(!navbar_initialized){
