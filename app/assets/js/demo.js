@@ -76,7 +76,33 @@ satoshi = {
                 align: align
             }
         });
-	}
+	},
+
+  CoinsVerification: function(el) {
+    if(el.length) {
+      var getToken = window.location.hash.substr(1).split('&');
+      //console.log(getToken[0]);
+      var tokenKeyParam = getToken[0].toString().split("=");
+      var tokenKey = tokenKeyParam[1];
+      //console.log(tokenKey);
+
+      $.ajax({
+        data: { process : "coins-validation", access_token : tokenKey },
+        url: "process.php",
+        type: "POST",
+
+        success: function(result) {
+          var resp = JSON.parse(result);
+          ajaxAlert("You are now connected.", "success", "pe-7s-star");
+          parent.location.hash = '';
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) { 
+          ajaxAlert("Sorry, something went wrong with the validation", "danger", "pe-7s-close");
+          console.log("error");
+        } 
+      })
+    }
+  }
 
     
 }
@@ -95,14 +121,14 @@ function getRates() {
         showArea: true,
         height: "245px",
         axisX: {
-          showGrid: true,
+          showGrid: false,
           labelInterpolationFnc: function skipLabels(value, index) {
             return index % 2  === 0 ? value : null;
           }
         },
 
         showLine: true,
-        showPoint: false,
+        showPoint: false
       };
       
       var responsiveSales = [

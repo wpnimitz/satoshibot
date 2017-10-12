@@ -24,7 +24,7 @@
 	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
 
 	<!--  Charts Plugin -->
-	<script src="assets/js/chartist.min.js"></script>
+    <script src="assets/js/chartist.min.js"></script>
 
     <!--  Notifications Plugin    -->
     <script src="assets/js/bootstrap-notify.js"></script>
@@ -32,26 +32,16 @@
 
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="assets/js/light-bootstrap-dashboard.js?version=1.0.3"></script>
+	<script src="assets/js/light-bootstrap-dashboard.js?version=1.0.4"></script>
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-	<script src="assets/js/demo.js?version=1.0.10"></script>
+	<script src="assets/js/demo.js?version=<?php echo strtotime(date("Y-m-d h:i:s")); ?>"></script>
 
 	<script type="text/javascript">
     	$(document).ready(function(){
-
         	//satoshi.initChartist();
         	satoshi.initRateChart();
-
-        	$.notify({
-            	icon: 'pe-7s-gift',
-            	message: "Welcome to <b>Satoshi BOT</b> - your friendly coins.ph BOT."
-
-            },{
-                type: 'info',
-                timer: 4000
-            });
-
+            satoshi.CoinsVerification(".coinsverification");
     	});
 	</script>
 

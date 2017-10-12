@@ -85,8 +85,6 @@ lbd = {
             sidebar_container = '<div class="widget-background" style="background-image: url(' + image_src + ') "/>'
             $widget.append(sidebar_container);
         }
-
-        console.log("Hello, I'm here...");
     },
     initRightMenu: function(){
          if(!navbar_initialized){

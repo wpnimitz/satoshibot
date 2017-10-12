@@ -131,7 +131,7 @@
 
 
 
-.card {
+.pricing .card {
   border: 0;
   border-radius: 0px;
   -webkit-box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.08);
@@ -141,7 +141,7 @@
   position: relative;
   will-change: transform;
 }
-.card:after {
+.pricing .card:after {
   content: '';
   position: absolute;
   top: 0;
@@ -151,26 +151,25 @@
   background-color: #57e2b2;
   transition: 0.5s;
 }
-.card:hover {
+.pricing .card:hover {
   transform: scale(1.05);
   -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
   box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
 }
-.card:hover:after {
+.pricing .card:hover:after {
   width: 100%;
 }
-.card .card-header {
+.pricing .card .card-header {
   background-color: white;
-  padding-left: 2rem;
   border-bottom: 0px;
 }
-.card .card-title {
+.pricing .card .card-title {
   margin-bottom: 1rem;
 }
-.card .card-block {
+.pricing .card .card-block {
   padding-top: 0;
 }
-.card .list-group-item {
+.pricing .card .list-group-item {
     border: 0px;
     padding: 10px;
     color: #808080;

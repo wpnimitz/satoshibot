@@ -8,19 +8,19 @@ include("inc/header.php");
 		<div class="col-md-8">
             <div class="card">
                 <div class="header">
-                    <h4 class="title">Bitcoin PHP Rate</h4>
-                    <p class="category">12 Hours performance</p>
+                     <h4 class="title">Bitcoin PHP Rate</h4>
+                    <p class="category">Latest 12 hours comparison. Updated every hour.</p>
                 </div>
                 <div class="content">
                     <div id="chartRates" class="ct-chart"></div>
                     <div class="footer">
                         <div class="legend">
-                            <i class="fa fa-circle text-info"></i> Buying
-                            <i class="fa fa-circle text-danger"></i> Selling
+                            <i class="fa fa-circle text-info"></i> Latest 12 hours
+                            <i class="fa fa-circle text-danger"></i> Previous 12 hours
                         </div>
                         <hr>
                         <div class="stats">
-                            <i class="fa fa-history"></i> Updated 3 minutes ago
+                            <i class="fa fa-history"></i> ...
                         </div>
                     </div>
                 </div>

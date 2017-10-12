@@ -22,7 +22,7 @@
 
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="assets/css/demo.css?version=1.0.21" rel="stylesheet" />
+    <link href="assets/css/demo.css?version=<?php echo strtotime(date("Y-m-d h:i:s")); ?>" rel="stylesheet" />
 
 
     <!--     Fonts and icons     -->
@@ -109,3 +109,4 @@
 
 	    <div class="content">
 	        <div class="container-fluid">
+
